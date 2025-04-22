@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { getRandomJoke, getWeather, getLatestLaunch, getNasaPhoto, getAdvice } from "@/lib/api";
 import { APICard } from "@/components/APICard";
+import { HomeButton } from "@/components/HomeButton";
 
 export default function ShowcasePage() {
   return (
@@ -15,6 +16,7 @@ export default function ShowcasePage() {
         <APICard title="NASA Photo" fetcher={getNasaPhoto} />
         <APICard title="Advice" fetcher={getAdvice} />
       </div>
+      <HomeButton></HomeButton>
     </main>
   );
 }

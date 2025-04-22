@@ -8,10 +8,14 @@ export default function HomePage() {
         <h1 className="text-4xl md:text-5xl font-semibold tracking-tight">
           Welcome to API Central
         </h1>
-        <p className="text-neutral-600 dark:text-neutral-400 text-lg">
-          A full-stack authentication flow with FastAPI and Next.js
+        <p className="text-lg sm:text-xl text-neutral-600 dark:text-neutral-400 max-w-xl mb-2">
+          All Your Favorite APIs In One Place
         </p>
-        <div className="flex justify-center gap-4">
+        <p className="text-sm text-neutral-500 dark:text-neutral-500 mb-10">
+          Build. Test. Explore.
+        </p>
+
+        <div className="flex flex-wrap gap-4 mb-8 justify-center">
           <Link
             href="/login"
             className="px-6 py-3 bg-black text-white rounded-full text-sm font-medium shadow-md hover:bg-neutral-800 transition"
@@ -28,7 +32,7 @@ export default function HomePage() {
             href="/showcase"
             className="px-6 py-3 bg-black text-white rounded-full text-sm font-medium shadow-md hover:bg-neutral-800 transition"
           >
-            Try the API Showcase
+            API Showcase
           </Link>
         </div>
       </div>

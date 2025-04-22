@@ -3,7 +3,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/context/ThemeContext";
 
 
-export const metadata = { title: "JWT Demo" };
+export const metadata = { title: "API Central" };
 
 export default function RootLayout({
   children,
