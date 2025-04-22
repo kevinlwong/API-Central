@@ -1,4 +1,5 @@
 import { ThemeToggle } from "@/components/ThemeToggle";
+import Link from "next/link";
 
 export default function HomePage() {
   return (
@@ -11,18 +12,24 @@ export default function HomePage() {
           A full-stack authentication flow with FastAPI and Next.js
         </p>
         <div className="flex justify-center gap-4">
-          <a
+          <Link
             href="/login"
             className="px-6 py-3 bg-black text-white rounded-full text-sm font-medium shadow-md hover:bg-neutral-800 transition"
           >
             Log in
-          </a>
-          <a
+          </Link>
+          <Link
             href="/dashboard"
             className="px-6 py-3 border dark:hover:bg-neutral-800 dark:text-white dark:border-neutral-600 border-neutral-300 rounded-full text-sm font-medium text-black hover:bg-neutral-100 transition"
           >
             Dashboard
-          </a>
+          </Link>
+          <Link
+            href="/showcase"
+            className="px-6 py-3 bg-black text-white rounded-full text-sm font-medium shadow-md hover:bg-neutral-800 transition"
+          >
+            Try the API Showcase
+          </Link>
         </div>
       </div>
       <ThemeToggle />
