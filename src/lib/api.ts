@@ -20,6 +20,12 @@ export async function getLatestLaunch() {
   return await res.json();
 }
 
+export async function getAdvice() {
+  const res = await fetch("https://api.adviceslip.com/advice");
+  if (!res.ok) throw new Error("Failed to fetch advice");
+  return await res.json();
+}
+
 export async function getNasaPhoto() {
   const apiKey = process.env.NEXT_PUBLIC_NASA_API_KEY || "DEMO_KEY";
   const res = await fetch(
@@ -37,11 +43,5 @@ export async function getNasaPhoto() {
   }
 
   if (!res.ok) throw new Error("Failed to fetch NASA photo");
-  return await res.json();
-}
-
-export async function getAdvice() {
-  const res = await fetch("https://api.adviceslip.com/advice");
-  if (!res.ok) throw new Error("Failed to fetch advice");
   return await res.json();
 }
