@@ -28,9 +28,14 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   }, []);
 
   async function login(username: string, password: string) {
-    const { data } = await api.post("/login", { username, password });
-    localStorage.setItem("jwt", data.access_token);
-    setToken(data.access_token);
+    try {
+      const { data } = await api.post("/login", { username, password });
+      localStorage.setItem("jwt", data.access_token);
+      setToken(data.access_token);
+    } catch (err) {
+      console.error("Login failed:", err);
+      throw err;
+    }
   }
 
   function logout() {
